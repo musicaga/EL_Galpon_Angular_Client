@@ -1,3 +1,27 @@
-<p>
-  post works!
-</p>
+<ul class="collection" *ngFor="let post of posts">
+  <li class="collection-item avatar">
+    <img src="assets/default.png" class="circle">
+    <span class="title">{{post.user.firstName}}</span>
+    <p class="time">{{formatDate(post.updatedAt)}}<br>
+      country
+    </p>
+  </li>
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image">
+          <img class="postImage" src="assets/default.png">
+        </div>
+        <div class="card-content" *ngIf="post.message">
+          <p >this is my own post</p>
+        </div>
+        <div class="card-action">
+          <i class="material-icons">thumb_up</i>
+          <span class="iconSpan">{{post.totalLikes}}</span>
+          <i class="material-icons">chat</i>
+          <span class="iconSpan">{{post.totalComments}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ul>

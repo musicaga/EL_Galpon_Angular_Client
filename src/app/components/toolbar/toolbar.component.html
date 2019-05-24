@@ -10,10 +10,11 @@
     </div>
     <div class="nav-content">
       <div class="nav-div">
-        <img  class="circle responsive-img" src="http://placehold.it/50x50">
+        <img *ngIf="!user.profileImage" class="circle responsive-img" src="assets/default.png">
+        <img *ngIf="user.profileImage" class="circle responsive-img" src="{{user.profileImage.url}}">
       </div>
-      <h1 class="profile-name">Luis</h1>
-      <p class="user-text">This is a test</p>
+      <h1 class="profile-name">{{user.firstName}} {{user.lastName}}</h1>
+      <p class="user-text">{{user.email}}</p>
     </div>
   </div>
 </nav>

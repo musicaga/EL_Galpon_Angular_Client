@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { IUser } from '../inferfaces/user';
-import { exists } from 'fs';
 
 @Injectable({
   providedIn: 'root'
